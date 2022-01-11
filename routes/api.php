@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/* 
+1.- Mostrar todos perros (index GET)
+2.- Mostrar perro por ID (show GET)
+3.- Añadir perro (update GET)
+4.- Grabar en BBDD (store POST)
+5.- Eliminar perro (destroy DELETE) 
+*/
