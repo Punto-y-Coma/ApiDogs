@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 1.- Mostrar todos perros (index GET)
 2.- Mostrar perro por ID (show GET)
 3.- Añadir perro (update GET)
-4.- Grabar en BBDD (store POST)
+4.- Grabar en BBDD (store PUT)
 5.- Eliminar perro (destroy DELETE) 
 */
