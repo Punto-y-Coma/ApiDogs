@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dog;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DogApiController extends Controller
 {
@@ -13,7 +16,8 @@ class DogApiController extends Controller
      */
     public function index()
     {
-        //
+        $dogs = Dog::all();
+        return response()->json($dogs,200);
     }
 
     /**
@@ -23,7 +27,12 @@ class DogApiController extends Controller
      */
     public function create()
     {
-        //
+        
+
+
+
+
+
     }
 
     /**
@@ -45,7 +54,18 @@ class DogApiController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        //$dog = DB::where('id',$id)->get(); igual que haciendo el where
+        //$dog = Dog::find($id);
+
+        $dog = Dog::where('id',$id)->get();
+
+
+        // return response()->json(['dog' => $dog],200); esto si se hiciera con find
+        return response()->json($dog,200);
+
+        /* $dogs = Dog::collect($id);
+        return response()->json($dogs,200); */
     }
 
     /**
