@@ -24,12 +24,8 @@ Route::GET('/dogs', [DogApiController::class, 'index']);
 
 Route::GET('/dogs/{id}', [DogApiController::class, 'show']);
 
-//Route::POST('/dogs', )
+Route::POST('/dogs', [DogApiController::class, 'store']);
 
-/* 
-1.- Mostrar todos perros (index GET)
-2.- Mostrar perro por ID (show GET)
-3.- Añadir perro (update GET)
-4.- Grabar en BBDD (store PUT)
-5.- Eliminar perro (destroy DELETE) 
-*/
+Route::DELETE('/dogs/{id}', [DogApiController::class, 'destroy']);
+
+Route::PUT('/dogs/{id}', [DogApiController::class, 'update']);
